@@ -2,7 +2,9 @@ package com.example.juegos_preguntas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -37,15 +39,19 @@ public class MainActivity4 extends AppCompatActivity {
                         Toast.makeText(MainActivity4.this,"Incorrecta",Toast.LENGTH_LONG).show();
                         break;
                     case R.id.radioButton3:
-                        Toast.makeText(MainActivity4.this,"Correcta",Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity4.this,"Incorrecta",Toast.LENGTH_LONG).show();
                         break;
                     case R.id.radioButton4:
-                        Toast.makeText(MainActivity4.this,"Incorrecta",Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity4.this,"Correcta",Toast.LENGTH_LONG).show();
                         break;
 
                 }
 
             }
         });
+    }
+    public void siguiente4(View view){
+        Intent siguiente4 =new Intent(this,MainActivity.class);
+        startActivity(siguiente4);
     }
 }

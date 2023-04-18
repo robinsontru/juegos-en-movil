@@ -2,7 +2,9 @@ package com.example.juegos_preguntas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
@@ -31,10 +33,10 @@ public class MainActivity3 extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int chechedId) {
                 switch (chechedId){
                     case R.id.radioButton1:
-                        Toast.makeText(MainActivity3.this,"Correcta",Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity3.this,"Incorrecta",Toast.LENGTH_LONG).show();
                         break;
                         case R.id.radioButton2:
-                            Toast.makeText(MainActivity3.this,"Incorrecta",Toast.LENGTH_LONG).show();
+                            Toast.makeText(MainActivity3.this,"Correcta",Toast.LENGTH_LONG).show();
                         break;
                     case R.id.radioButton3:
                         Toast.makeText(MainActivity3.this,"Incorrecta",Toast.LENGTH_LONG).show();
@@ -47,5 +49,9 @@ public class MainActivity3 extends AppCompatActivity {
 
             }
         });
+    }
+    public void siguiente3(View view){
+        Intent siguiente3 =new Intent(this,MainActivity4.class);
+        startActivity(siguiente3);
     }
 }

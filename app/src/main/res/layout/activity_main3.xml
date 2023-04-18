@@ -90,4 +90,13 @@
 
     </RadioGroup>
 
+    <Button
+        android:id="@+id/siguiente"
+        android:layout_width="108dp"
+        android:layout_height="49dp"
+        android:onClick="siguiente3"
+        android:text="siguiente"
+        tools:layout_editor_absoluteX="264dp"
+        tools:layout_editor_absoluteY="666dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
