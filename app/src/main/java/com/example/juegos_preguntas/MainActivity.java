@@ -3,6 +3,7 @@ package com.example.juegos_preguntas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
@@ -13,7 +14,8 @@ public class MainActivity extends AppCompatActivity {
     //declaramos la variables
     RadioGroup rgpregunta1;
     RadioButton radioButton1, radioButton2, radioButton3, radioButton4;
-
+    MediaPlayer bien, mal;
+    public  static int punto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +23,10 @@ public class MainActivity extends AppCompatActivity {
         referencia();
     }
 
+
     private void referencia() {
+        bien = MediaPlayer.create(this,  R.raw.bien);
+        mal = MediaPlayer.create(this,  R.raw.mal);
         rgpregunta1 = findViewById(R.id.rgpregunta1);
         radioButton1 = findViewById(R.id.radioButton1);
         radioButton2 = findViewById(R.id.radioButton2);
@@ -34,25 +39,27 @@ public class MainActivity extends AppCompatActivity {
                 switch (chechedId) {
                     case R.id.radioButton1:
                         Toast.makeText(MainActivity.this, "incoreecto", Toast.LENGTH_LONG).show();
+                        mal.start();
                         break;
                     case R.id.radioButton2:
                         Toast.makeText(MainActivity.this, "incoreecto", Toast.LENGTH_LONG).show();
+                        mal.start();
                         break;
                     case R.id.radioButton3:
                         Toast.makeText(MainActivity.this, "correcto", Toast.LENGTH_LONG).show();
-
-
+                        Intent radioButton3 = new Intent(MainActivity.this, MainActivity2.class);
+                        startActivity(radioButton3);
+                        bien.start();
+                        punto=punto+4;
                         break;
                     case R.id.radioButton4:
                         Toast.makeText(MainActivity.this, "incoreecto", Toast.LENGTH_LONG).show();
+                        mal.start();
                         break;
                 }
             }
         });
     }
-    public void siguiente1(View view){
-        Intent siguiente1 =new Intent(this,MainActivity2.class);
-        startActivity(siguiente1);
-    }
+
 
 }
