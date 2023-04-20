@@ -5,6 +5,16 @@
     <string name="pregunta3">cuales el rio mas largo del planeta</string>
     <string name="pregunta4">cuantos dias hay en un año</string>
     <string name="respuesta">tu puntaje es :</string>
-    <string name="botton_inicio">jugar</string>
+    <string name="btn_inicio">jugar</string>
+
+    <string name="btn1">mostrar toas corta duracion</string>
+    <string name="btn2">mostrar toas larga duracion</string>
+    <string name="btn3">mostrar alert con btn ok</string>
+    <string name="btn4">mostrar alert con btn ok y cancelar</string>
+    <string name="nombre">Nombre</string>
+    <string name="edad">Edad</string>
+    <string name="apellido">Apellido</string>
+    <string name="Nombre" />
+
 
 </resources>

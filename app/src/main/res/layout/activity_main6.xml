@@ -26,7 +26,7 @@
         android:layout_margin="40dp"
         android:backgroundTint="@color/teal_700"
         android:onClick="siguiente1"
-        android:text="@string/botton_inicio"
+        android:text="@string/btn_inicio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
